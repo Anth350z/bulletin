@@ -1,2 +1,2 @@
 # bulletinBoard
-Bulletin board
+Bulletin board 
