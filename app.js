@@ -71,3 +71,7 @@ connection.query('DELETE FROM messages where id=?',iddd, function(error, result)
   res.redirect("/");
 })
 })
+
+app.get('*', function(request, response) {
+  response.status(404).send('Page Not Found.');
+});
