@@ -1,0 +1,23 @@
+<% include partials/header %>
+  <br>
+  <a href="/">Go Back</a>
+  <center>
+    <h1>Message</h1></center>
+
+  <div id="post_open" class="container text-center">
+
+    <h3><%=resultado[0].tittle%></h3>
+    <p>
+      <%= resultado[0].body %>
+    </p>
+
+
+    <form action="/home/<%= resultado[0].id %>" method="POST">
+
+      <br>
+      <button class="btn btn-primary btn-large">Delete Note</button> </div>
+  </form>
+  </div>
+
+
+  <% include partials/footer %>

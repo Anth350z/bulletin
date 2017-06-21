@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+<div id="adding" class="container">
+    <div  class="row">
+        <h1 style="text-align: center; color:white">Message</h1>
+        <div style="width: 50%; margin: 25px auto;">
+            <form action="/home" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="tittle" placeholder="Name Here">
+                </div>
+
+                <div class="form-group" >
+                    <textarea class="form-control" rows="6" type="text" name="body" placeholder="Body Descripcion"></textarea>
+                </div>
+              <center>  <div class="form-group" id="boton">
+                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+              </div></center>
+          
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+   <% result.forEach(function(post){ %>
+       <div class="col-md-4 col-sm-6">
+           <div class="thumbnail">
+              <h2><%=post.tittle%></h2>
+              <div class="caption">
+                  <h4><%= post.body%></h4>
+              </div>
+
+              <p>
+                  <a href="/post/<%= post.id %>" class="">Open</a>
+              </p>
+           </div>
+       </div>
+   <% }); %>
+</div>
+
+
+<% include partials/footer %>
